@@ -49,6 +49,7 @@ jobs:
       
       - name: 安装依赖
         run: |
+          sudo apt-get install -y wkhtmltopdf
           pip install --upgrade pip
           pip install -r requirements.txt
       
@@ -487,3 +488,4 @@ jobs:
             echo "📜 最近日志（最后 30 行）:"
             tail -30 logs/stock_analysis_*.log 2>/dev/null || echo "无日志"
           fi
+
